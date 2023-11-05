@@ -1,5 +1,19 @@
+html,
+body {
+  width: 100%; 
+  margin: 0;
+  padding: 0;
+}
+
 .body {
-    font-family: "Open-Sans", sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 680px;
+    min-height: 100vh;
+    color: #1F1E1E;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
@@ -24,15 +38,22 @@
     width: 100%;
     height: 100%;
     background-color: rgba(222, 222, 222, 0.50);
-    @supports (backdrop-filter: blur(10px)) {
+}
+
+@supports (backdrop-filter: blur(10px)) {
+    .page-header::before {
         backdrop-filter: blur(10px);
         background-color: rgba(222, 222, 222, 0.50);
     }
 }
 
-.page-header__container {
+.page-header__container,
+.events__container {
     box-sizing: border-box;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
     padding-left: 40px;
     padding-right: 40px;
@@ -41,7 +62,6 @@
 }
 
 .page-header__logo {
-    margin-right: 237px;
     display: inline-block;
     width: 202px;
     height: 147x;
@@ -54,11 +74,11 @@
 
 .page-header__nav {
     display: inline-block;
-    margin-right: 230px;
 }
 
 .page-header__nav-link {
     margin: 0 25px;
+    font-family: 'Lora', sans-serif;
     color: #000000;
     font-weight: 600;
     font-size: 18px;
@@ -82,8 +102,8 @@
     padding-top: 147px;
 }
 
-.main-header {
-    padding: 100px 0;
+.main {
+    flex: 1 0 auto;
 }
 
 .main-header__title,
@@ -130,6 +150,151 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.main-header {
+    padding: 100px 0;
+}
+
+.events {
+    padding-top: 147px;
+}
+
+.events__container {
+    flex-direction: column;
+}
+
+.events__title {
+    align-self: center;
+}
+
+.title {
+    margin: 0 0 150px;
+    box-sizing: border-box;
+    padding: 7px 45px 9px;
+    max-width: 624px;
+    width: 100%;
+    text-align: center;
+    background-color: #1F1E1E;
+    text-transform: uppercase;
+    font-family: Lora;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.listing {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 120px 60px;
+}
+
+.listing__card-event {
+    max-width: 405px;
+    width: calc(33.333% - 40px);
+}
+
+.card-event {
+    box-sizing: border-box;
+}
+
+.card-event__link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-event__link:hover .card-event__title {
+    color: #A51505;
+    text-decoration-color: #A51505;
+}
+
+.card-event__picture {
+    position: relative;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.card-event__picture::before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 107.16%;
+}
+
+.card-event__picture-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-event__title {
+    margin: 0 0 auto;
+    min-height: 64px;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    font-family: Open Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #1F1E1E;
+    transition: color 0.2s;
+}
+
+.card-event__text {
+    margin: 15px 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    color: #1F1E1E;
+}
+
+.card-event__time {
+    margin-top: auto;
+    display: block;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    color: #1F1E1E;
+}
+
+.event {
+    padding: 40px 0 150px;
+  }
+  
+.reserve {
+    display: grid;
+    gap: 65px 11%;
+    grid-template-columns: 405px calc(89% - 405px);
+    grid-template-areas: 
+      "checks scheme"
+      "order legend"; 
+    width: 100%;
+}
+
+.reserve__checks {
+    grid-area: checks;
+}
+  
+.reserve__order {
+    grid-area: order;
+}
+  
+.reserve__scheme {
+    grid-area: scheme;
+}
+  
+.reserve > div {
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: coral;
+    text-align: center;
 }
 
 .page-footer {
