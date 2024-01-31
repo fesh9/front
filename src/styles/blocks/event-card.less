@@ -63,6 +63,22 @@
         line-height: normal;
         color: #1F1E1E;
         transition: color 0.2s;
+
+        @media @bw1660 {
+            margin: 0 0 10px;
+        }
+        
+        @media @bw1340 {
+            min-height: 54px;
+            font-size: 20px;
+            line-height: 27px;
+        }
+
+        @media @bw768 {
+            min-height: 44px;
+            font-size: 16px;
+            line-height: 22px;
+        }
     }
 
     &__description {
@@ -71,6 +87,11 @@
         font-weight: 400;
         line-height: normal;
         color: #1F1E1E;
+
+        @media @bw1020 {
+            font-size: 14px;
+            line-height: 19px;
+        }
     }
 
     &__time {
