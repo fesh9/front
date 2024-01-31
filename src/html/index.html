@@ -13,22 +13,24 @@
           <picture class="main-header__picture">
             <img src="assets/images/lenni.png" class="main-header__img"/>
           </picture>
-
+          
           <p class="main-header__text">
-            для людей, горящих сердец и делом место для настоящего
+            для людей, горящих сердцем и делом 
+            место для настоящего
           </p>
         </header>
 
         <section class="offers home__offers"></section>
-        <section class="about home__about"></section>
+        @@include('blocks/about.html', { class: 'home__about' })
         <section class="upcoming home__upcoming"></section>
-        <section class="blog home__blog"></section>
-        <section class="contacts home__contacts"></section>
+        @@include('blocks/blog-listing.html', {"class": "home__listing"})
+        @@include('blocks/contacts.html', { class: 'contacts' })
         
         <div class="doit home__doit"></div>
       </div>
     </main>
 
     @@include('blocks/page-footer.html')
+    @@include('blocks/event-pp.html')
   </body>
 </html>
