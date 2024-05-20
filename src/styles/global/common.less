@@ -55,6 +55,15 @@ textarea {
 .main-header {
   padding: 100px 0;
 
+  @media @bw768 {
+    padding-bottom: 40px;
+  }
+
+  @media @bw1340 {
+    padding-top: 80px;
+    padding-bottom: 73px;
+  }
+
   &__title {
     margin: 0 0 70px;
     padding-left: 40px;
@@ -65,7 +74,27 @@ textarea {
     font-weight: 400;
     font-size: 45px;
     line-height: normal;
-    color: #1F1E1E;
+    color: @black;
+
+    @media @bw1660 {
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 45px;
+    }
+
+    @media @bw1340 {
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 38px;
+      margin-bottom: 50px;
+    }
+
+    @media @bw768 {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 17px;
+      margin-bottom: 30px;
+    }
   }
 
   &__text {
@@ -80,7 +109,29 @@ textarea {
     font-weight: 400;
     font-size: 45px;
     line-height: normal;
-    color: #1F1E1E;
+    color: @black;
+
+    @media @bw768 {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 17px;
+    }
+
+    @media @bw1660 {
+      font-size: 35px;
+      line-height: 45px;
+      max-width: 738px;
+      font-weight: 400;
+    }
+
+    @media @bw1340 {
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 38px;
+      padding: 0;
+      max-width: 632px;
+      width: 100%;
+    }
   }
 
   &__picture {
@@ -88,6 +139,14 @@ textarea {
     margin-bottom: 70px;
     position: relative;
     width: 100%;
+    
+    @media @bw768 {
+      margin-bottom: 30px;
+    }
+    
+    @media @bw1340 {
+      margin-bottom: 50px;
+    }
   }
 
   &__picture::before {
@@ -137,7 +196,7 @@ img {
 button {
   box-shadow: none;
   outline: none;
-  color: @black;
+  //color: @black;
   font-family: @font1;
   cursor: pointer;
 }

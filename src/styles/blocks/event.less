@@ -109,13 +109,18 @@
             font-weight: 700;
             line-height: 19px;
 
-            @media @bw768 {
+            @media @bw1340 {
                 font-size: 12px;
                 line-height: 14.4px;
             }
         }
         
         @media @bw768 {
+            font-size: 18px;
+            line-height: 21.6px;
+        }
+
+        @media @bw1340 {
             font-size: 18px;
             line-height: 21.6px;
         }
@@ -130,6 +135,19 @@
             font-size: 12px;
             line-height: 14.4px;
         }
+
+        @media @bw1340 {
+            font-size: 12px;
+            line-height: 14.4px;
+        }        
+    }
+
+    .picture__wrapper {
+        @media @bw768 {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
     }
 
     &__picture {
@@ -140,6 +158,16 @@
         @media @bw768 {
             margin: 0 37.5px 40px;
             order: 1;
+        }
+
+        @media @bw1340 {
+            margin: 0 30px 76px;
+            max-width: 245px;
+        }
+
+        @media @bw1660 {
+            margin: 0 50px 80px;
+            max-width: 426px;
         }
     }
 

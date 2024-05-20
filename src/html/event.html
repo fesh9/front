@@ -22,12 +22,14 @@
                 </div>
               </div>
 
-              <picture class="event__picture">
-                <source media="(max-width:1169px)" type="image/webp" srcset="assets/images/events/sade_mobile.webp" />
-                <source media="(max-width:1169px)" srcset="assets/images/events/sade_mobile.jpg" />
-                <source type="image/webp" srcset="assets/images/events/sade.webp" />
-                <img class="event__image" src="assets/images/events/sade.png" alt="Вечер | The Best of Sade">
-              </picture>
+              <div class="picture__wrapper">
+                <div class="event__picture">
+                  <source media="(max-width:1169px)" type="image/webp" srcset="assets/images/events/sade_mobile.webp" />
+                  <source media="(max-width:1169px)" srcset="assets/images/events/sade_mobile.jpg" />
+                  <source type="image/webp" srcset="assets/images/events/sade.webp" />
+                  <img class="event__image" src="assets/images/events/sade.png" alt="Вечер | The Best of Sade">
+                </div>
+              </div>
 
               <div class="event__info">
                 <span class="event__time" data-caption="начало">
@@ -42,7 +44,7 @@
             
             <div class="event__container">
                 <div class="event__content content">
-                  <h5>Программа мероприятия</h5>
+                  <h5>Программа мероприятия:</h5>
 
                   <ul>
                     <li>20:15 — Приветствие гостей</li>
@@ -89,5 +91,11 @@
     </main>
     
     @@include('blocks/page-footer.html')
+
+    <script src="scripts/jquery-3.7.1.min.js"></script>
+    <script src="scripts/jquery.validate.min.js"></script>
+    <script src="scripts/jquery.validate-init.js"></script>
+    <script src="scripts/toastr.js"></script>
+    <script src="scripts/main.min.js"></script>
   </body>
 </html>

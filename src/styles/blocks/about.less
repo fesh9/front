@@ -1,5 +1,18 @@
 .about {
     padding-bottom: 90px;
+
+    @media @bw1660 {
+        padding-bottom: 100px;
+    }
+
+    @media @bw1340 {
+        padding-bottom: 50px;
+    }
+
+    @media @bw768 {
+        padding-bottom: 60px;
+    }
+
     &__block {
         display: flex;
         flex-direction: column;
@@ -18,12 +31,36 @@
             width: 100%;
         }
 
+        @media @bw1340 {
+            font-size: 26px;
+        }
+
+        @media @bw768 {
+            font-size: 18px;
+            margin-bottom: 30px;       
+        }
+
         // &--mt {
         //     margin-top: -120px;
         // }
 
         &--2 {
             grid-area: title;
+
+            @media @bw1340 {
+                max-width: 419px;
+                margin-top: 28px;
+                align-self: start;
+                height: 72px;
+
+
+            }
+
+            @media @bw768 {
+                order:2;
+                margin-bottom: 30px;
+                margin-top: 60px;
+            }
         }
     }
     &__text {
@@ -35,9 +72,33 @@
         font-weight: 400;
         color: @black;
 
+        @media @bw1340 {
+            font-size: 16px;
+            max-width: 637px;
+            align-self: flex-end;
+            line-height: 22px;
+        }
+
+        @media @bw768 {
+            font-size: 16px;
+            margin-bottom: 60px;       
+        }
+
         &--2 {
             grid-area: text;
             margin-left: auto;
+
+            @media @bw1340 {
+                margin-left: 0;
+                max-width: 348px;
+                grid-area: text;
+                justify-self: end;
+            }
+
+            @media @bw768 {
+                order: 2;
+                margin-bottom: 50px;
+            }
         }
 
         &--mb90 {
@@ -55,6 +116,10 @@
             display: block;
             width: 100%;
             padding-top: 66.322%;
+        }
+
+        @media @bw768 {
+            order: 1;
         }
     }
     &__img {
@@ -74,6 +139,27 @@
             "text text text";
         gap: 60px;
         grid-template-columns: 1fr 1fr 404px;
+        grid-template-rows: 470px 1fr;
+
+        @media @bw1340 {
+            grid-template-areas: 
+            "picture1 picture1"
+            "title picture2"
+            "text picture2";
+            grid-template-columns: 419px 1fr;
+            grid-template-rows: 472px 70px 1fr;
+            gap: 0;
+            grid-row-gap: 52px;
+            grid-column-gap: 27px;
+            margin-bottom: 52px;
+        }
+
+        @media @bw768 {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin-bottom: 50px;
+        }
     }
 
     &__picture2 {
@@ -84,6 +170,20 @@
         display: block;
         // width: 30.284%;
         // max-width: 404px;
+
+        @media @bw1340 {
+            width: 262px;
+            height: 321px;
+            justify-self: start;
+            align-self: start;
+        }
+
+        @media @bw768 {
+            order: 3;
+            width: 193px;
+            height: 236px;
+            align-self: self-end;
+        }
 
         &::before {
             content: '';
@@ -97,7 +197,12 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        gap: 60px;        
+        gap: 60px;
+        
+        @media @bw1340 {
+            flex-direction: column;
+            gap: 80px;
+        }
     }
 
     &__picture3 {
@@ -133,10 +238,50 @@
         bottom: 0;
         width: calc(100% - 58px);
         object-fit: contain;
+
+        @media @bw768 {
+            width: calc(100% - 11px);
+            right: 2px;
+        }
     }
 
     &__block3-wrapper {
         max-width: 344px;
         width: 100%;
+
+        @media @bw1340 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 708px;
+            width: 100%;
+        }
+
+        @media @bw768 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__text--success {
+        @media @bw1340 {
+            max-width: 280px;
+            width: 100%;
+            margin: 0;
+        }
+
+        @media @bw768 {
+            align-self: center;
+        }
+    }
+
+    &__icon {
+        margin-left: 117px;
+        @media @bw1340 {
+            width: 67px;
+            height: 40px;
+        }
     }
 }

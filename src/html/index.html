@@ -22,13 +22,15 @@
 
         <!-- <section class="offers home__offers"></section> -->
         @@include('blocks/i-want.html', { class: 'i-want--mb200'})
-        @@include('blocks/about.html', { class: 'home__about' })
+        @@include('blocks/about.html', { class: 'home__about', id: 'about' })
         @@include('blocks/upcoming.html', { class: 'upcoming' })
-        @@include('blocks/blog-listing.html', {"class": "home__listing"})
-        @@include('blocks/contacts.html', { class: 'contacts' })
-        
+        @@include('blocks/blog-listing.html', { class: 'home__listing' })
+        @@include('blocks/contacts.html', { class: 'contacts', id: 'contacts' })
+
         <div class="home__doit">
           <p class="home__doit-text1">Просто делайте, что нравится, </p>
+          <p class="home__doit-text11">Просто делайте,</p>
+          <p class="home__doit-text12">что нравится,</p>
           <p class="home__doit-text2">а мы вам поможем</p>
         </div>
       </div>
@@ -36,5 +38,19 @@
 
     @@include('blocks/page-footer.html')
     @@include('blocks/event-pp.html')
+
+    <script src="scripts/jquery-3.7.1.min.js"></script>
+    <script src="scripts/jquery.selectric.min.js"></script>
+    <script src="scripts/jquery.mask.min.js"></script>
+    <script src="scripts/air-datepicker.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvNbEdWyR7G9BDfCwo7ejHQWY6fsdwt6I"></script>
+
+    <script src="scripts/jquery.validate.min.js"></script>
+    <script src="scripts/jquery.validate-init.js"></script>
+    <script src="scripts/toastr.js"></script>
+    
+    <script src="scripts/swiper.min.js"></script>
+    <script src="scripts/main.min.js"></script>
   </body>
 </html>
